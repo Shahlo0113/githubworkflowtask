@@ -1,26 +1,26 @@
 name: My Story Workflow
 
 on:
- push:
-   branches:
+  push:
+    branches:
      - main  
- pull_request:
-   paths:
+  pull_request:
+    paths:
      - storybook/**
- workflow_dispatch:
-   inputs:
-     story_title:
-       description: 'Rainbow Umbrella'
-       required: true
-     author_name:
-       description: 'Ann Hoang'
-       required: true
+  workflow_dispatch:
+    inputs:
+      story_title:
+        description: 'Rainbow Umbrella'
+        required: true
+      author_name:
+        description: 'Ann Hoang'
+        required: true
 
 jobs:
- build:
-   runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-   steps:
+    steps:
      - name: Checkout repository
        uses: actions/checkout@v2
 
