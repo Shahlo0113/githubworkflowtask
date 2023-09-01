@@ -23,7 +23,7 @@ jobs:
     steps:
        uses: actions/checkout@v3
 
-     - name: My Story
+      - name: My Story
             run:|
          echo "Once upon a time in a faraway land"
          echo "${{ Rainbow Umbrella }} was written by ${{ Ann Hoang }}"
