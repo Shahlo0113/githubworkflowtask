@@ -17,8 +17,8 @@ on:
         required: true
 
 jobs:
-    build:
-     runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout Actions
