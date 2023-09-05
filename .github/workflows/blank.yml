@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: My Story Workflow
 
 # Controls when the workflow will run
 on:
@@ -8,10 +8,20 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+    paths:
+     - storybook/**
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+workflow_dispatch:
+  inputs:
+      story_title:
+        description: 'Rainbow Umbrella'
+        required: true
+      author_name:
+        description: 'Ann Hoang'
+        required: true
+        type: string
+
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,12 +35,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run My Story
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          echo Once upon a time in a faraway land
+          echo ${{ inputs. Rainbow Umbrella }} was written by ${{ inputs. Ann Hoang }}
+          echo This whimsical tale takes you on a journey through a magical forest where every flower could talk.
+          echo Will you explore its secrets?
