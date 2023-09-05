@@ -15,16 +15,17 @@ on:
       author_name:
         description: 'Ann Hoang'
         required: true
+        type: string
 jobs:
   build:
-  runs-on: ubuntu-latest
- steps:
+    runs-on: ubuntu-latest
+steps:
     - name: Checkout Actions
       uses: actions/checkout@v2
 
     - name: My Story
             run:|
-         echo "Once upon a time in a faraway land"
-         echo "${{ inputs. Rainbow Umbrella }} was written by ${{ inputs. Ann Hoang }}"
-         echo "This whimsical tale takes you on a journey through a magical forest where every flower could talk."
-         echo "Will you explore its secrets?"
+         echo Once upon a time in a faraway land
+         echo ${{ inputs. Rainbow Umbrella }} was written by ${{ inputs. Ann Hoang }}
+         echo This whimsical tale takes you on a journey through a magical forest where every flower could talk.
+         echo Will you explore its secrets?
